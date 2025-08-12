@@ -1,6 +1,7 @@
 import requests
 from django.core.management.base import BaseCommand
 from airports.models import Airport
+from amopromo_test.settings import API_URL_EXTRACT, MOCK_AUTH_USER, MOCK_AUTH_USER_SENHA
 
 
 class Command(BaseCommand):
@@ -12,6 +13,7 @@ class Command(BaseCommand):
         try:
             response = requests.get(API_URL_EXTRACT, auth=(MOCK_AUTH_USER, MOCK_AUTH_USER_SENHA))
             response.raise_for_status()
+
         except requests.RequestException as e:
             self.stderr.write(f"Erro ao conectar na API: {e}")
             return
