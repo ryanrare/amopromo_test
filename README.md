@@ -18,7 +18,9 @@ Before running the project, make sure you have:
    ```bash
    git clone https://github.com/ryanrare/amopromo_test.git
    cd amopromo_test
-1. It is necessary to create a .env file in the root of the project, with the environment variables that are referenced in the settings file.
+   
+It is necessary to create a .env file in the root of the project, with the environment variables that are referenced in the settings file.
+
 2. **Build and start the container**
 
    ```bash
